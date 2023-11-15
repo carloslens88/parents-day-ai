@@ -12,6 +12,20 @@
     <title>Speech To Text</title>
   </head>
   <body id="mainBody" class="container pt-5" style="background-color: black;">
+    <div>
+        <h1 class="mb-4 text-light text-center">Welcome to the Little Clovers AI for Kids</h1>
+    </div>
+    <div>
+        <img style="align-content: center; display: block; margin-left: auto; margin-right: auto; width: 50%;" alt="explores" src="../resources/images/explorers.jpeg" width="550" height="450" />
+    </div>
+    <div>
+        <h4 class="mt-4 text-light text-center">This is the way to learn about software with so much fun!!!</h4>
+    </div>
+    <div class="text-center">
+        <button class="small btn btn-success" id="start">Start</button>
+        <button class="small btn btn-danger" id="stop">Stop</button>
+        <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>
+        </div>
     <div class="mt-4" id="div_language">
       <h2 class="mb-3 text-light">Select Language</h2>
       <select class="form-select bg-secondary text-light" id="select_language" onchange="updateCountry()"></select>
@@ -22,11 +36,7 @@
       <span id="final" class="text-light"></span>
       <span id="interim" class="text-secondary"></span>
     </div>
-    <div class="mt-4">
-      <button class="btn btn-success" id="start">Start</button>
-      <button class="btn btn-danger" id="stop">Stop</button>
-      <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>
-    </div>
+
     <dialog id="favDialog">
         <div>
             <img id="dialogImage"/>

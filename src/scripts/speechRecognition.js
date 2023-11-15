@@ -77,6 +77,14 @@ if ("webkitSpeechRecognition" in window) {
       document.body.style.backgroundColor="green";
     }
 
+    if(word.includes('orange')){
+      document.body.style.backgroundColor="orange";
+    }
+
+    if(word.includes('brown')){
+      document.body.style.backgroundColor="brown";
+    }
+
     if(word.includes('school')){
       document.getElementById("dialogImage").src = "../resources/images/littleCloversLogo.jpeg";
       document.getElementById("favDialog").showModal();
