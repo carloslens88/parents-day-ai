@@ -90,6 +90,11 @@ if ("webkitSpeechRecognition" in window) {
       document.getElementById("favDialog").showModal();
     }
 
+    if(word.includes('numbers')){
+      document.getElementById("dialogImage").src = "../resources/images/numbers.gif";
+      document.getElementById("favDialog").showModal();
+    }
+
     if(word.includes('close')){
       document.getElementById("favDialog").close();
     }
@@ -97,6 +102,8 @@ if ("webkitSpeechRecognition" in window) {
     if(word.includes('stop')){
       document.getElementById("babyShark").pause();
       document.getElementById("wheelsOnTheBus").pause();
+      document.getElementById("clovi").pause();
+      document.getElementById("countingNumbers").pause();
     }
 
     if(word.includes('shark')){
@@ -112,6 +119,22 @@ if ("webkitSpeechRecognition" in window) {
 
       setTimeout(function(){
         document.getElementById("wheelsOnTheBus").pause();
+      }, 120000);
+    }
+
+    if(word.includes('hello') || word.includes('clovi')){
+      document.getElementById("clovi").play();
+
+      setTimeout(function(){
+        document.getElementById("clovi").pause();
+      }, 120000);
+    }
+
+    if(word.includes('counter')){
+      document.getElementById("countingNumbers").play();
+
+      setTimeout(function(){
+        document.getElementById("countingNumbers").pause();
       }, 120000);
     }
   }
