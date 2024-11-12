@@ -85,17 +85,27 @@ if ("webkitSpeechRecognition" in window) {
       document.body.style.backgroundColor="brown";
     }
 
+    if(word.includes('black')){
+      document.body.style.backgroundColor="black";
+    }
+
     if(word.includes('school')){
       document.getElementById("dialogImage").src = "../resources/images/littleCloversLogo.jpeg";
       document.getElementById("favDialog").showModal();
     }
+
 
     if(word.includes('numbers')){
       document.getElementById("dialogImage").src = "../resources/images/numbers.gif";
       document.getElementById("favDialog").showModal();
     }
 
-    if(word.includes('close')){
+    if(word.includes('dinosaurs')){
+      document.getElementById("dialogImage").src = "../resources/images/dinasours.jpeg";
+      document.getElementById("favDialog").showModal();
+    }
+
+    if(word.includes('close') || word.includes('remove')){
       document.getElementById("favDialog").close();
     }
 
@@ -104,6 +114,7 @@ if ("webkitSpeechRecognition" in window) {
       document.getElementById("wheelsOnTheBus").pause();
       document.getElementById("clovi").pause();
       document.getElementById("countingNumbers").pause();
+      document.getElementById("moveIt").pause();
     }
 
     if(word.includes('shark')){
@@ -135,6 +146,14 @@ if ("webkitSpeechRecognition" in window) {
 
       setTimeout(function(){
         document.getElementById("countingNumbers").pause();
+      }, 120000);
+    }
+
+    if(word.includes('move it')){
+      document.getElementById("moveIt").play();
+
+      setTimeout(function(){
+        document.getElementById("moveIt").pause();
       }, 120000);
     }
   }
